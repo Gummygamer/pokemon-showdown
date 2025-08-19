@@ -1188,6 +1188,11 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		doublesTier: "DOU",
 		natDexTier: "OU",
 	},
+	dragonitemega: {
+		isNonstandard: "Future",
+		tier: "Illegal",
+		natDexTier: "OU",
+	},
 	mewtwo: {
 		tier: "Uber",
 		doublesTier: "DUber",

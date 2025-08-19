@@ -1407,6 +1407,20 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		gen: 5,
 		isNonstandard: "Past",
 	},
+	dragonitite: {
+		name: "Dragonitite",
+		spritenum: 0,
+		megaStone: "Dragonite-Mega",
+		megaEvolves: "Dragonite",
+		itemUser: ["Dragonite"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1001,
+		gen: 9,
+		isNonstandard: "Future",
+	},
 	dragonmemory: {
 		name: "Dragon Memory",
 		spritenum: 682,
