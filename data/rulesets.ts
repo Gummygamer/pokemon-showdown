@@ -71,6 +71,21 @@ export const Rulesets: import('../sim/dex-formats').FormatDataTable = {
 			}
 		},
 	},
+	limitthreerestricted: {
+		effectType: 'ValidatorRule',
+		name: 'Limit Three Restricted',
+		desc: "Limit three restricted Pok\u00E9mon (flagged with * in the rules list)",
+		onValidateTeam(team) {
+			const restrictedSpecies = [];
+			for (const set of team) {
+				const species = this.dex.species.get(set.species);
+				if (this.ruleTable.isRestrictedSpecies(species)) restrictedSpecies.push(species.name);
+			}
+			if (restrictedSpecies.length > 3) {
+				return [`You can only use up to three restricted Pok\u00E9mon (you have: ${restrictedSpecies.join(', ')})`];
+			}
+		},
+	},
 	standarddoubles: {
 		effectType: 'ValidatorRule',
 		name: 'Standard Doubles',

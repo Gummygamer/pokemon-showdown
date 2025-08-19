@@ -270,6 +270,23 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		restricted: ['Restricted Legendary', 'Mythical'],
 	},
 	{
+		name: "[Gen 9] VGC 2026 Reg K",
+		mod: 'gen9',
+		gameType: 'doubles',
+		bestOfDefault: true,
+		desc: "Speculative Champions ruleset highlighting Mega Evolution via Mega Stones alongside Terastallization.",
+		ruleset: ['Flat Rules', '!! Adjust Level = 50', 'Min Source Gen = 9', 'VGC Timer', 'Open Team Sheets', '+Past', '+Future', 'Limit Three Restricted'],
+		restricted: ['Restricted Legendary', 'Mythical'],
+	},
+	{
+		name: "[Gen 9] VGC 2026 Reg K (Bo3)",
+		mod: 'gen9',
+		gameType: 'doubles',
+		searchShow: false,
+		ruleset: ['Flat Rules', '!! Adjust Level = 50', 'Min Source Gen = 9', 'VGC Timer', 'Force Open Team Sheets', 'Best of = 3', '+Past', '+Future', 'Limit Three Restricted'],
+		restricted: ['Restricted Legendary', 'Mythical'],
+	},
+	{
 		name: "[Gen 9] Doubles Custom Game",
 		mod: 'gen9',
 		gameType: 'doubles',
